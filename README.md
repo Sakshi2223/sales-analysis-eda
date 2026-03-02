@@ -1,170 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sales Performance Analysis </title>
-</head>
-<body>
 
-<h1>📊 Sales Performance Analysis </h1>
+<h1>📊 Regional Sales Performance Analysis</h1>
 
-<h2>🔍 Business Context</h2>
+<h2>📌 Project Summary</h2>
 <p>
-The business experienced steady revenue growth between 2014 and 2018 but lacked clarity on
-which products, channels, and regions were driving profitability versus concentration risk.
-Leadership required a data-driven assessment to evaluate performance against budgets,
-understand margin behavior, and identify scalable growth opportunities.
+This project analyzes transactional sales data to evaluate how revenue, profit, and
+order volume are distributed across products, sales channels, and geographic regions.
+The analysis focuses on identifying concentration risk, margin variability, and
+structural performance patterns that impact pricing decisions, channel strategy,
+and regional growth planning.
+</p>
+
+<p>
+Using transaction-level metrics such as order quantity, unit price, line total, and
+unit cost, the project translates raw sales data into actionable business insights
+supported by visual analysis and aggregated performance indicators.
 </p>
 
 <hr>
 
 <h2>❓ Problem Statement</h2>
 <p>
-Analyze sales data from <strong>2014–2018</strong> to identify key revenue and profit drivers across
-products, channels, and regions; uncover seasonal trends and outliers; and align performance
-against budgets. The objective is to use these insights to optimize pricing, promotions,
-and market-expansion strategies for sustainable growth while reducing concentration risk.
+Despite steady overall sales performance, the business lacked clarity on which
+products, channels, and regions were truly driving profitability versus merely
+generating volume. Leadership had limited visibility into margin dispersion,
+revenue concentration, and performance anomalies at a granular level, making it
+difficult to optimize pricing, balance channel mix, and prioritize regional investments.
 </p>
 
 <hr>
 
-<h2>🎯 Business Objectives</h2>
-<p>
-Using 2014–2018 sales data to:
-</p>
+<h2>🎯 Analytical Objectives</h2>
 <ul>
-    <li>Identify top-performing products, channels, and regions driving revenue and profit</li>
-    <li>Uncover seasonal trends and anomalies for improved planning</li>
-    <li>Detect pricing and margin risks from outlier transactions</li>
-    <li>Support pricing, promotion, and market-expansion decisions</li>
+    <li>Identify high-impact products contributing disproportionately to revenue</li>
+    <li>Evaluate channel-level revenue dependency and diversification risk</li>
+    <li>Analyze profit margin behavior across pricing tiers</li>
+    <li>Detect revenue and volume anomalies through trend analysis</li>
+    <li>Benchmark regional performance using revenue and order volume</li>
 </ul>
 
 <hr>
 
-<h2>🗂️ Data Overview</h2>
+<h2>🗂️ Dataset Overview</h2>
 <p>
-The dataset consists of historical transactional sales data spanning five years, including:
+The dataset consists of detailed sales transactions containing the following key fields:
 </p>
 <ul>
-    <li>Product-level revenue and profit</li>
-    <li>Sales channels (Wholesale, Distributors, Exports)</li>
-    <li>Regional sales and order volumes</li>
-    <li>Time-based attributes for trend analysis</li>
+    <li><strong>Order Information:</strong> Order Number, Order Date</li>
+    <li><strong>Product Metrics:</strong> Product Index, Order Quantity, Unit Price</li>
+    <li><strong>Financial Metrics:</strong> Line Total (Revenue), Total Unit Cost</li>
+    <li><strong>Sales Channels:</strong> Wholesale, Distributor, Export</li>
+    <li><strong>Geography:</strong> Delivery Region Index</li>
 </ul>
+
+<p>
+These attributes enable end-to-end analysis from pricing and cost behavior to
+regional demand patterns.
+</p>
 
 <hr>
 
-<h2>🛠️ Tools & Techniques</h2>
+<h2>🛠️ Tools & Skills Applied</h2>
 <ul>
     <li><strong>Python (Jupyter Notebook)</strong></li>
-    <li><strong>Pandas & NumPy</strong> – data cleaning, transformation, aggregation</li>
-    <li><strong>Matplotlib & Seaborn</strong> – trend, distribution, and comparative analysis</li>
+    <li><strong>Pandas & NumPy</strong> – data cleaning, joins, aggregations</li>
+    <li><strong>Matplotlib & Seaborn</strong> – trend, distribution, and comparative visuals</li>
     <li><strong>Exploratory Data Analysis (EDA)</strong></li>
-    <li><strong>Business-focused data storytelling</strong></li>
+    <li><strong>Business Insight Framing</strong></li>
 </ul>
 
 <hr>
 
-<h2>🔄 Analytical Approach</h2>
+<h2>🔄 Analysis Workflow</h2>
 
 <h3>1️⃣ Data Preparation</h3>
 <ul>
-    <li>Validated data consistency across years</li>
-    <li>Handled missing values and outliers</li>
-    <li>Standardized metrics for revenue, profit, and volume</li>
+    <li>Validated transaction completeness and pricing consistency</li>
+    <li>Derived revenue and profit metrics from line totals and unit costs</li>
+    <li>Created time-based features for trend analysis</li>
 </ul>
 
 <h3>2️⃣ Exploratory & Visual Analysis</h3>
 <ul>
-    <li>Monthly revenue and volume trend analysis</li>
-    <li>Product-wise revenue and profitability comparison</li>
-    <li>Channel mix and contribution analysis</li>
-    <li>Regional performance benchmarking</li>
+    <li>Monthly revenue and order-volume trends</li>
+    <li>Product-level revenue ranking</li>
+    <li>Channel contribution analysis</li>
+    <li>Profit margin dispersion across pricing levels</li>
+    <li>Regional revenue and order benchmarking</li>
 </ul>
 
 <hr>
 
 <h2>📈 Key Insights</h2>
 
-<h3>📅 Monthly Revenue Cycle</h3>
+<h3>📅 Revenue Trend Behavior</h3>
 <ul>
-    <li>Revenue remains stable between approximately <strong>$23M–$26.5M</strong> from 2014–2017</li>
-    <li>No consistent seasonal spikes observed</li>
-    <li>Sharpest decline occurs in early 2017 (≈ <strong>$21.2M</strong>), suggesting a potential one-time disruption</li>
+    <li>Monthly revenue remains largely stable between approximately <strong>$23M–$26.5M</strong></li>
+    <li>No strong recurring seasonal spikes observed</li>
+    <li>A sharp revenue dip (~<strong>$21.2M</strong>) indicates a potential operational or market disruption</li>
 </ul>
 
-<h3>🛒 Channel Mix</h3>
+<h3>🛒 Channel Contribution</h3>
 <ul>
-    <li>Wholesale: <strong>54%</strong></li>
-    <li>Distributors: <strong>31%</strong></li>
-    <li>Exports: <strong>15%</strong>, indicating opportunity to scale international sales</li>
+    <li>Wholesale dominates revenue at <strong>54%</strong></li>
+    <li>Distributors contribute <strong>31%</strong></li>
+    <li>Exports account for <strong>15%</strong>, highlighting diversification opportunities</li>
 </ul>
 
-<h3>📦 Top Products by Revenue</h3>
+<h3>📦 Product Performance</h3>
 <ul>
-    <li>Product 26: <strong>$118M</strong></li>
-    <li>Product 25: <strong>$110M</strong></li>
-    <li>Product 13: <strong>$78M</strong></li>
-    <li>Mid-tier products: <strong>$68M–$75M</strong></li>
-    <li>Bottom performers: <strong>$52M–$57M</strong></li>
+    <li>Top products generate outsized revenue (e.g., Product 26 at <strong>$118M</strong>)</li>
+    <li>Mid-tier products form a stable revenue base</li>
+    <li>Lower-performing products contribute meaningfully but dilute focus</li>
 </ul>
 
-<h3>💰 Profit Margins</h3>
+<h3>💰 Profit Margin Analysis</h3>
 <ul>
-    <li>Profit margins range from approximately <strong>18% to 60%</strong></li>
-    <li>No strong correlation observed between unit price and margin</li>
-    <li>Horizontal clustering suggests standardized pricing strategies across product tiers</li>
+    <li>Margins vary widely from approximately <strong>18%</strong> to <strong>60%</strong></li>
+    <li>Minimal correlation between unit price and profit margin</li>
+    <li>Margin clustering suggests standardized pricing policies</li>
 </ul>
 
-<h3>📊 Seasonal Volume Trends</h3>
+<h3>🌎 Regional Insights</h3>
 <ul>
-    <li>No strong recurring monthly volume pattern</li>
-    <li>Slight volume uptick observed during <strong>May–June</strong></li>
-    <li>Early 2017 volume dip aligns with revenue decline and warrants further investigation</li>
-</ul>
-
-<h3>🌎 Regional Performance</h3>
-<ul>
-    <li><strong>California</strong> leads with ≈ <strong>$230M</strong> revenue and <strong>7,500+</strong> orders</li>
-    <li><strong>Illinois, Florida, Texas</strong>: ≈ <strong>$85M–$110M</strong> revenue with <strong>3,500–4,500</strong> orders</li>
-    <li><strong>New York & Indiana</strong>: ≈ <strong>$54M</strong> revenue with <strong>2,000+</strong> orders</li>
+    <li>One region significantly outperforms others in both revenue and order volume</li>
+    <li>Several mid-tier regions show strong efficiency but lower scale</li>
+    <li>Long-tail regions represent potential expansion or rationalization candidates</li>
 </ul>
 
 <hr>
 
 <h2>💡 Business Recommendations</h2>
 <ul>
-    <li>Investigate the early 2017 revenue and volume decline to mitigate recurrence</li>
-    <li>Reduce revenue concentration by strengthening mid-performing regions</li>
-    <li>Expand export channel to diversify geographic revenue streams</li>
-    <li>Review pricing consistency to improve margins without volume loss</li>
+    <li>Investigate root causes behind the identified revenue decline</li>
+    <li>Reduce dependence on a single dominant channel</li>
+    <li>Re-evaluate standardized pricing to improve margin efficiency</li>
+    <li>Prioritize scalable mid-performing regions for growth initiatives</li>
 </ul>
 
 <hr>
 
 <h2>📌 Conclusion</h2>
 <p>
-This analysis provides a comprehensive view of sales performance across products, channels,
-and regions. By combining trend analysis, margin diagnostics, and regional benchmarking,
-the findings enable leadership to make informed decisions on pricing, promotions,
-and market expansion while minimizing concentration risk.
+This analysis demonstrates how transaction-level sales data can be transformed into
+strategic insights through structured exploration and visualization. The findings
+support informed decision-making around pricing strategy, channel optimization,
+and regional expansion while mitigating revenue and margin risk.
 </p>
 
-<hr>
 
-<h2>📂 Repository Structure</h2>
-<pre>
-├── Sales_Analysis_2014_2018.ipynb
-├── README.md
-</pre>
-
-<hr>
 
 <h2>👤 Author</h2>
 <p>
 <strong>Sakshi Augad</strong><br>
-Data Analyst | Python | SQL | Excel | Power BI<br>
-Focused on translating complex business data into actionable insights
+Data Analyst | SQL | Excel | Python | Power BI<br>
+Focused on business-driven analytics and insight generation
 </p>
 
 </body>
